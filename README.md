@@ -6,19 +6,19 @@ getopt-dosbatch
 
 Usage
 -----
-    set "OPTARGS=a:bcd:ef"
+    set "GO_OPTARGS=a:bcd:ef"
     call getopt <options> [*]
 
 Output
 ------
 解析結果は変数に代入される。
 
-* 引数なしオプションの場合、オプションが指定されていれば OPT_optname 変数に yes が格納される。
-* 引数ありオプションの場合、オプションが指定されていれば OPT_optname 変数に引数の値が格納される。
+* 引数なしオプションの場合、オプションが指定されていれば GO_OPT_optname 変数に yes が格納される。
+* 引数ありオプションの場合、オプションが指定されていれば GO_OPT_optname 変数に引数の値が格納される。
  * ※値は2重引用符で囲まれていない
 * オプションが指定されていなければ変数は作られない。
-* ARGC 変数にオプションではない引数の数が入る。
-* ARGV1～ARGV%ARGC% 変数にオプションではない引数が入る
+* GO_ARGC 変数にオプションではない引数の数が入る。
+* GO_ARGV1～GO_ARGV%ARGC% 変数にオプションではない引数が入る
  * ※値は2重引用符で囲まれていない
 
 License

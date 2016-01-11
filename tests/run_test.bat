@@ -24,12 +24,12 @@ call :is_equal "%ERRORLEVEL%" 1 "Checking whether getopt returns an error with e
 
 call getopt_test_wrapper.bat "a:bcd:efg" -a -b -c -d "e&f" "ghi jkl" "mno&pqr" <NUL
 call :is_equal "%ERRORLEVEL%" 0 "Checking whether getopt finishes with no error"
-call :is_equal2 "%ARGC%" "2" "ARGC"
-call :is_equal2 "%OPT_a%" "-b" "OPT_a"
-call :is_equal2 "%OPT_c%" "yes" "OPT_c"
-call :is_equal2 "%OPT_d%" "e&f" "OPT_d"
-call :is_equal2 "%ARGV1%" "ghi jkl" "ARGV1"
-call :is_equal2 "%ARGV2%" "mno&pqr" "ARGV2"
+call :is_equal2 "%GO_ARGC%" "2" "GO_ARGC"
+call :is_equal2 "%GO_OPT_a%" "-b" "GO_OPT_a"
+call :is_equal2 "%GO_OPT_c%" "yes" "GO_OPT_c"
+call :is_equal2 "%GO_OPT_d%" "e&f" "GO_OPT_d"
+call :is_equal2 "%GO_ARGV1%" "ghi jkl" "GO_ARGV1"
+call :is_equal2 "%GO_ARGV2%" "mno&pqr" "GO_ARGV2"
 
 pause
 goto :EOF
