@@ -6,8 +6,8 @@ getopt-dosbatch
 
 Usage
 -----
-  set "OPTARGS=a:bcd:ef"
-  call getopt <options> [*]
+    set "OPTARGS=a:bcd:ef"
+    call getopt <options> [*]
 
 Output
 ------
@@ -20,4 +20,8 @@ Output
 * ARGC 変数にオプションではない引数の数が入る。
 * ARGV1～ARGV%ARGC% 変数にオプションではない引数が入る
 ** ※値は2重引用符で囲まれていない
+
+License
+-------
+MIT License
 
